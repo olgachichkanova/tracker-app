@@ -92,3 +92,15 @@
     height: 15px;
     margin-right: 10px;
   }
+
+  .alert {
+    padding: 0.7rem;
+    margin: 1rem 0;
+    opacity: 0.9;
+    color: #333;
+  }
+
+  .alert-danger {
+    background: $accent-color;
+    color: #fff;
+  }
