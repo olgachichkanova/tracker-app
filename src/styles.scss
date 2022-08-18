@@ -1,0 +1,94 @@
+@import 'styles/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+    
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: $bg-primary;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: 700px;
+    margin-bottom: 5px;
+  }
+  
+  h2 {
+    margin-bottom: 25px;
+  }
+  
+  .accent--text {
+    color: $accent-color;
+  }
+  
+  input {
+    background: $bg-secondary;
+    padding: 20px 15px;
+    width: 350px;
+    outline: none;
+    border: none;
+  }
+  .btn {
+    background: $btn-green;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 50px;
+    border: none;
+  }
+  
+  .btn:hover {
+    background: $btn-hover;
+  }
+  
+  .btn--secondary {
+    background: none;
+    color: $accent-color;
+    border: 2px solid $accent-color;
+  }
+  
+  .btn--secondary:hover {
+    background: $accent-color;
+    color: white;
+  }
+  
+  .btn--circle {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .btn:disabled {
+    background: $btn-disabled;
+    color: #fff;
+  }
+  
+  .btn--secondary:disabled {
+    background: none;
+    color: $btn-disabled;
+    border-color: $btn-disabled;
+  }
+
+  .container {
+    display: flex;
+    padding: 150px 80px;
+  }
+
+  .icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }

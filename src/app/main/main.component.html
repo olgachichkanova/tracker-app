@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="settings">
+        <h1>Let's start the work now:</h1>
+        <ul class="manual">
+          <li>Выберите категорию и напишите название текущей задачи</li>
+          <li>Запустите таймер («помидор»)</li>
+          <li>Работайте пока «помидор» не прозвонит</li>
+          <li>Сделайте короткий перерыв (3-5 минут)</li>
+          <li>Продолжайте работать «помидор» за «помидором», пока задача не будут выполнена. Каждые 4 «помидора» делайте длинный перерыв (15-30 минут).</li>
+        </ul>
+        <div class="tasks">
+          <form class="tasks--form">
+            <input type="text" name="task" placeholder="Enter the task">
+            <button class="btn">Add</button>
+          </form>
+          <ul class="tasks--list">
+            <li><p><span class="stat--badge">2</span>Item</p><button><svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="3" cy="3" r="3" fill="#C4C4C4"/>
+  <circle cx="13" cy="3" r="3" fill="#C4C4C4"/>
+  <circle cx="23" cy="3" r="3" fill="#C4C4C4"/>
+  </svg></button></li>
+            <li><p><span class="stat--badge">2</span>Item</p><button><svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="3" cy="3" r="3" fill="#C4C4C4"/>
+  <circle cx="13" cy="3" r="3" fill="#C4C4C4"/>
+  <circle cx="23" cy="3" r="3" fill="#C4C4C4"/>
+  </svg></button></li>
+          </ul>
+          <p class="total">1 hour 15 min</p>
+        </div>
+    </div>
+    <div class="timer--box">
+      <div class="timer--header">
+        <p class="task">Task name</p>
+        <p class="task--state">Tomato 1</p>
+      </div>
+      <div class="timer--wrapper">
+        <div class="timer">
+          <p>25:00</p>
+          <button class="btn btn--circle" disabled>+</button>
+        </div>
+        <p class="task">Task name</p>
+        <div class="btn--wrapper">
+            <button class="btn">Start</button>
+            <button class="btn btn--secondary" disabled>Stop</button>
+        </div>
+      </div>
+    </div>
+</div>

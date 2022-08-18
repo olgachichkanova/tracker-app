@@ -1,0 +1,86 @@
+@import '../../styles/variables';
+
+.container--stats {
+    flex-direction: column;
+}
+
+.graph--box {
+    display: flex;
+}
+  
+.summary--day {
+    padding: 25px;
+    width: 260px;
+
+    background: $bg-secondary;
+}
+
+.summary--tomato {
+    width: 260px;
+    background: $bg-secondary;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 25px;
+    padding-top: 25px;
+
+    div {
+        background: $accent-color;
+        color: #fff;
+        text-align: center;
+        
+        padding: 10px;
+    }
+
+    p {
+        display: inline-flex;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    span {
+        margin-left: 15px;
+    }
+}
+
+
+.graph {
+    background: $bg-secondary;
+    margin-left: 25px;
+}
+
+.stats--box {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 25px;
+}
+
+.stats--card {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    width: 30%;
+    background: #FFDDA9;
+
+    padding: 25px;
+    
+    &:nth-child(n+2) {
+        background: #DFDCFE;
+    }
+
+    &:nth-child(n+3) {
+        background: #C5F1FF;
+    }
+
+    p {
+        font-size: 64px;
+    }
+}
+
+.placeholder {
+    width: 100%;
+    min-width: 800px;
+    height: 100%;
+}

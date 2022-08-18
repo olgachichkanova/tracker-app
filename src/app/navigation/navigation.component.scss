@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #fff;
+    padding: 25px 80px;
+  }
+  
+  .nav--item, .logo {
+    color: $accent-color;
+    font-size: 24px;
+  }
+  
+  .nav--item:hover, .logo:hover {
+    color: #B7280F;
+  }
+  
+  .logo--box{
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-left: 10px;
+  }
