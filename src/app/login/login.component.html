@@ -1,22 +1,50 @@
 <div class="container">
-    <form class="login--form">
-        <h1>Login to continue</h1>
-        <div class="form--control">
+    <form class="login--form" [formGroup]="form" (ngSubmit)="submit()">
+        <h1>Login</h1>
+
+        <div class="alert alert-danger" *ngIf="auth.error$ | async as error">
+            {{ error }}
+        </div>
+
+        <div 
+            class="form--control"
+            [ngClass]="{invalid: form.get('email')?.touched && form.get('email')?.invalid}"
+        >
             <label for="email">Email</label>
-            <input id="email" type="email">
-            <div class="validation">
-
+            <input id="email" type="email" formControlName="email">
+            <div 
+                *ngIf="form.get('email')?.touched && form.get('email')?.invalid"
+                class="validation"
+            >
+                <small *ngIf="form.get('email')?.errors?.required">Please, enter your email</small>
+                <small *ngIf="form.get('email')?.errors?.email">Please, make sure the email is valid</small>
             </div>
         </div>
 
-        <div class="form--control">
+        <div 
+            class="form--control"
+            [ngClass]="{invalid: form.get('password')?.touched && form.get('password')?.invalid}"
+        >
             <label for="password">Password</label>
-            <input id="password" type="password">
-            <div class="validation">
-
+            <input id="password" type="password" formControlName="password">
+            <div 
+                *ngIf="form.get('password')?.touched && form.get('password')?.invalid"
+                class="validation"
+            >
+            <small *ngIf="form.get('password')?.errors?.required">Please, enter your password</small>
+            <small *ngIf="form.get('password')?.errors?.minlength">
+                Password should have at least 
+                {{form.get('password')?.errors?.minlength.requiredLength}} 
+                symbols. Now it's 
+                {{form.get('password')?.errors?.minlength.actualLength}}.
+            </small>
             </div>
         </div>
 
-        <button type="submit" class="btn">Log in</button>
+        <button
+            type="submit"
+            class="btn"
+            [disabled]="form.invalid"
+        >Log in</button>
     </form>
 </div>
