@@ -44,6 +44,8 @@ ul.tasks--list{
 
     button{
         display: inline-flex;
+        border: none;
+        background: transparent;
     }
 
 }
@@ -116,4 +118,8 @@ ul.tasks--list{
 
 .btn--wrapper .btn--secondary {
     margin-left: 20px;
+}
+
+.no--tasks {
+    margin: 25px auto;
 }
