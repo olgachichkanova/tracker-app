@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.tasks--form {
+    display: flex;
+    margin-top: 25px;
+}
+  
+ul.tasks--list{
+    width: 350px;
+    border-top: 1px solid $btn-disabled;
+
+    margin-top: 25px;
+
+    li{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $btn-disabled;
+        padding: 20px 0;
+    }
+
+    button{
+        display: inline-flex;
+        border: none;
+        background: transparent;
+    }
+
+}
+
+.stat--badge {
+    display: inline-flex;
+    border: 1px solid $btn-disabled;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.total {
+    margin: 25px 0;
+    color: #999999;
+    font-weight: 300;
+}
+
+.no--tasks {
+    margin: 25px auto;
+}

@@ -5,6 +5,11 @@
     margin-right: 25px;
 }
 
+app-timer {
+    display: flex;
+    width: 100%;
+}
+
 ul.manual {
     list-style: none;
     margin-bottom: 25px;
@@ -20,106 +25,4 @@ ul.manual {
             width: 1em;
         }
     }
-}
-
-.tasks--form {
-    display: flex;
-    margin-top: 25px;
-}
-  
-ul.tasks--list{
-    width: 350px;
-    border-top: 1px solid $btn-disabled;
-
-    margin-top: 25px;
-
-    li{
-        width: 100%;
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid $btn-disabled;
-        padding: 20px 0;
-    }
-
-    button{
-        display: inline-flex;
-        border: none;
-        background: transparent;
-    }
-
-}
-
-.stat--badge {
-    display: inline-flex;
-    border: 1px solid $btn-disabled;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.total {
-    margin: 25px 0;
-    color: #999999;
-    font-weight: 300;
-}
-
-.timer--box {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    background: $bg-secondary;
-}
-
-.timer--header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px 40px;
-    background: $btn-disabled;
-    color: #fff;
-}
-
-.task {
-    font-weight: 700;
-}
-
-.timer--wrapper{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-
-    width: 50%;
-    margin: auto 0;
-}
-
-.timer {
-    display: flex;
-    align-items: center;
-
-    p {
-        font-size: 150px;
-        font-weight: 200;
-    }
-
-    button {
-        margin-left: 25px;
-    }
-}
-
-.btn--wrapper {
-    margin-top: 30px;
-}
-
-.btn--wrapper .btn--secondary {
-    margin-left: 20px;
-}
-
-.no--tasks {
-    margin: 25px auto;
 }

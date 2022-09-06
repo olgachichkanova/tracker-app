@@ -1,0 +1,18 @@
+<div class="timer--box">
+    <div class="timer--header">
+        <p class="task">Task name</p>
+        <p class="task--state">Tomato 1</p>
+    </div>
+    <div class="timer--wrapper">
+        <div class="timer">
+        <p>{{ timer.time | date: 'mm:ss' }}</p>
+        <button class="btn btn--circle" disabled>+</button>
+        </div>
+        <p class="task">Task name</p>
+        <div class="btn--wrapper">
+            <button class="btn" (click)="start()">Start</button>
+            <button class="btn btn--secondary" (click)="pause()">Stop</button>
+            <button *ngIf="timer.status === 'running' || timer.status === 'paused'" class="btn btn--secondary" (click)="reset()">Reset</button>
+        </div>
+    </div>
+</div>
