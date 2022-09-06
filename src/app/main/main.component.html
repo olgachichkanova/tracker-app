@@ -8,43 +8,7 @@
           <li>Make the short pause (3-5 min)</li>
           <li>Continue to work on your task until it's done. Make a long pause after every 4 tomatoes (15-20 min).</li>
         </ul>
-        <div class="tasks">
-          <form class="tasks--form" [formGroup]="form" (ngSubmit)="submit()">
-            <div 
-              class="form--control"
-              [ngClass]="{invalid: form.get('task')?.touched && form.get('task')?.invalid}"
-            >
-              <input id="task" type="text" formControlName="task" placeholder="Enter the task">
-              <div 
-                  *ngIf="form.get('task')?.touched && form.get('task')?.invalid"
-                  class="validation"
-              >
-                <small *ngIf="form.get('task')?.errors?.required">Please, enter your task</small>
-            </div>
-        </div>
-            <button 
-              class="btn"
-              type="submit"
-            >Add</button>
-          </form>
-          <div  *ngIf="tasks$ | async as tasks; else noTasks">
-            <ul class="tasks--list">
-              <li *ngFor="let task of tasks">
-                <p><span class="stat--badge">2</span>{{ task.text }}</p>
-                <button (click)="remove(task.id)"> 
-                  <span class="icon">
-                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.75V12.25H3V4.75H9ZM7.875 0.25H4.125L3.375 1H0.75V2.5H11.25V1H8.625L7.875 0.25ZM10.5 3.25H1.5V12.25C1.5 13.075 2.175 13.75 3 13.75H9C9.825 13.75 10.5 13.075 10.5 12.25V3.25Z" fill="#A8B64F"/></svg>
-                  </span>
-                </button>
-              </li>
-            </ul>
-            <p class="total">1 hour 15 min</p>
-          </div>
-        </div>
+        <app-tasks-list></app-tasks-list>
     </div>
     <app-timer></app-timer>
 </div>
-
-<ng-template #noTasks>
-  <p class="no--tasks">There are no tasks yet. Please,create a task first.</p>
-</ng-template>

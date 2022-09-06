@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/auth.interceptor';
 import { TimerComponent } from './timer/timer.component';
+import { TasksListComponent } from './tasks-list/tasks-list.component';
 
 const INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -25,7 +26,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
     MainComponent,
     StatsComponent,
     LoginComponent,
-    TimerComponent
+    TimerComponent,
+    TasksListComponent
   ],
   imports: [
     BrowserModule,
