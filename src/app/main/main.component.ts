@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { switchMap, filter } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { Task } from '../shared/interface';
 import { TasksService } from '../shared/tasks.service';
+
 
 @Component({
   selector: 'app-main',
@@ -11,7 +12,7 @@ import { TasksService } from '../shared/tasks.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-
+  // task list
   form!: FormGroup;
   tasks$!: Observable<Task[]>;
   refreshTasks$ = new BehaviorSubject<boolean>(true);
@@ -19,6 +20,7 @@ export class MainComponent implements OnInit {
   constructor(private tasksService: TasksService) { }
 
   ngOnInit(): void {
+    // task list
     this.form = new FormGroup({
       task: new FormControl(null, Validators.required)
     })
@@ -27,6 +29,8 @@ export class MainComponent implements OnInit {
       switchMap(_ => this.tasksService.getTasks())
     )
   }
+
+  // task list
 
   submit() {
     if(this.form.invalid) {

@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.timer--box {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    background: $bg-secondary;
+}
+
+.timer--header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    background: $btn-disabled;
+    color: #fff;
+}
+
+.task {
+    font-weight: 700;
+}
+
+.timer--wrapper{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+
+    width: 50%;
+    margin: auto 0;
+
+    .timer {
+        display: flex;
+        align-items: center;
+    
+        p {
+            font-size: 150px;
+            font-weight: 200;
+        }
+    
+        button {
+            margin-left: 25px;
+        }
+    }
+}
+
+.btn--wrapper {
+    margin-top: 30px;
+
+    .btn--secondary {
+        margin-left: 20px;
+    }
+}

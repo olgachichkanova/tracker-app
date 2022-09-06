@@ -2,11 +2,11 @@
     <div class="settings">
         <h1>Let's start the work now:</h1>
         <ul class="manual">
-          <li>Выберите категорию и напишите название текущей задачи</li>
-          <li>Запустите таймер («помидор»)</li>
-          <li>Работайте пока «помидор» не прозвонит</li>
-          <li>Сделайте короткий перерыв (3-5 минут)</li>
-          <li>Продолжайте работать «помидор» за «помидором», пока задача не будут выполнена. Каждые 4 «помидора» делайте длинный перерыв (15-30 минут).</li>
+          <li>Add the task</li>
+          <li>Start the timer (tomato)</li>
+          <li>Work until timer rings</li>
+          <li>Make the short pause (3-5 min)</li>
+          <li>Continue to work on your task until it's done. Make a long pause after every 4 tomatoes (15-20 min).</li>
         </ul>
         <div class="tasks">
           <form class="tasks--form" [formGroup]="form" (ngSubmit)="submit()">
@@ -42,23 +42,7 @@
           </div>
         </div>
     </div>
-    <div class="timer--box">
-      <div class="timer--header">
-        <p class="task">Task name</p>
-        <p class="task--state">Tomato 1</p>
-      </div>
-      <div class="timer--wrapper">
-        <div class="timer">
-          <p>25:00</p>
-          <button class="btn btn--circle" disabled>+</button>
-        </div>
-        <p class="task">Task name</p>
-        <div class="btn--wrapper">
-            <button class="btn">Start</button>
-            <button class="btn btn--secondary" disabled>Stop</button>
-        </div>
-      </div>
-    </div>
+    <app-timer></app-timer>
 </div>
 
 <ng-template #noTasks>
