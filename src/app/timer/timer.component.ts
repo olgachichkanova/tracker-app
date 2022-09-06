@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import Timer from 'tiny-timer';
+import { Task } from '../shared/interface';
+import { TasksService } from '../shared/tasks.service';
 
 @Component({
   selector: 'app-timer',
@@ -10,9 +13,14 @@ export class TimerComponent implements OnInit {
 
   timer = new Timer()
 
-  constructor() { }
+  tasks$!: Observable<Task[]>;
+  currentTask!: string;
+
+  constructor(private tasksService: TasksService) { }
 
   ngOnInit(): void {
+    this.tasks$ = this.tasksService.getTasks()
+    this.tasks$.subscribe(tasks => this.currentTask = tasks[0].text)
   }
 
   start() {
